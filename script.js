@@ -1,8 +1,21 @@
+let contador = 1 
 
- let contador = 1 
+
+function drag(){ }
+
+function over() { }
+
+function drop() {}
+
+
+
+
+
+
+
+
+
 function adicionar(elemento){
-
-    
 
     const ulId = elemento.previousElementSibling.id
     const tarefa = prompt("qual a tarefa ?")
