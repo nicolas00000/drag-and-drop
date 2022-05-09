@@ -10,24 +10,33 @@
 <body>
 
 <div class="centro">
-    <div class="container ">
-        <div class="topo">fazer</div>
-        <ul>
-            <li>ver algo diferente toda manha por que esta rum a mubhas deruas e ioq eue faco de manha <p>X</p></li>
+
+    <div class="container ">    <div class="topo">fazer</div>
+        
+        <ul id="todo">
+          </ul ondrop="drop(event, this.id)" ondragover="over(event)">
+      
+        <div class="add-card topo cinza" onclick="adicionar(this)">  adicionar tarefa</div>
+    </div>
+
+    <div class="container ">    <div class="topo">fazer</div>
+        
+    <ul id="fazendo" ondrop="drop(event, this.id)" ondragover="over(event)">
+        <li draggable="true" ondragstart="drag(event)">ver al eue faco de manha <p>X</p></li>
+    </ul>
+    
+    <div class="add-card topo cinza" onclick="adicionar(this)">  adicionar tarefa</div>
+</div>
+
+<div class="container ">    <div class="topo">fazer</div>
+        
+        <ul id="feito" ondrop="drop(event, this.id)" ondragover="over(event)">
+            <li>ver ale ioq eue faco de manha <p>X</p></li>
         </ul>
-        <input type="text" class="addinput" data-ls-module="charCounter" maxlength="20" placeholder="escreva sua tarefa aqui">
-    </div>
-    <div class="container ">
-        <div class="topo">fazendo</div>
-
-        <input type="text" class="addinput">
+        
+        <div class="add-card topo cinza" onclick="adicionar(this)">  adicionar tarefa</div>
     </div>
 
-    <div class="container ">
-        <div class="topo">feito</div>
-
-        <input type="text" class="addinput">
-    </div>
 </div>
 </body>
 <script src="script.js"></script>
