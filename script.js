@@ -1,6 +1,4 @@
-let contador = 1 
-const input = document.getElementById("nome");
-
+let contador = 0;
 
 function drag(event){
     event.dataTransfer.setData("card", event.target.id)
@@ -20,7 +18,6 @@ function drop(event, id) {
 }
 
 
-
 function adicionar(elemento){
 
     const ulId = elemento.previousElementSibling.id
@@ -30,22 +27,31 @@ function adicionar(elemento){
 
 if(tarefa !== ""){
     
-const template = `
+    const template = `
+        <li id="${contador++}" draggable="true" ondragstart="drag(event)">
+           ${tarefa}    
+           <p onclick="remover(this)" >X</p>
+        </li>`
 
-<li id="${contador++}" draggable="true" ondragstart="drag(event)">   ${tarefa}    <p  onclick="remover(this)" >X</p>     </li>
-
-
-`
-
-// console.log(template)
-
-board.innerHTML += template
-}
-
-}
-
+    board.innerHTML += template
+      }
+    }
 
 function remover(elemento){
    document.getElementById(elemento.parentElement.id).remove()  
     
 }
+
+
+function mudarCor(){
+    var corNOVA = document.getElementById("cor").value; //buscando o id da cor do input de cor
+     document.getElementById(`container`).style.backgroundColor = corNOVA//esta selecionando a div pra pegar e trocar a cor do fundo
+} 
+function mudarCor1(){
+    var corNOVA = document.getElementById("cor1").value; //buscando o id da cor do input de cor
+     document.getElementById(`container1`).style.backgroundColor = corNOVA//esta selecionando a div pra pegar e trocar a cor do fundo
+} 
+function mudarCor2(){
+    var corNOVA = document.getElementById("cor2").value; //buscando o id da cor do input de cor
+     document.getElementById(`container2`).style.backgroundColor = corNOVA//esta selecionando a div pra pegar e trocar a cor do fundo
+} 
