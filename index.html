@@ -8,20 +8,19 @@
     <title>to do list</title>
 </head>
 <body>
-
+<div class="centrao">
 <div class="centro">
 
-    <div class="container ">    <div class="topo">fazer</div>
-        <!-- <input type="text" name="" id="nome"  placeholder="adicione aqui">
-        <button onclick="adicionar(this)" id="botao1">ok </button> -->
+    <div class="container" id="container">    <div class="topo"><button class="mudar-cor" onclick="mudarCor(this)">r </button> fazer <input class="cor" id="cor" type="color" ></div>
+
         <ul id="todo" ondrop="drop(event, this.id)" ondragover="over(event)">
-          
+      
         </ul >
       
-        <div class="add-card topo cinza" onclick="adicionar(this)">  adicionar tarefa</div>
+        <div class="add-card topo cinza" onclick="adicionar(this)">  adicionar tarefa </div>
     </div>
 
-    <div class="container ">    <div class="topo">fazer</div>
+    <div class="container " id="container1">    <div class="topo"> <button class="mudar-cor" onclick="mudarCor1(this)">r </button> fazer <input class="cor" id="cor1" type="color" ></div>
         
     <ul id="fazendo" ondrop="drop(event, this.id)" ondragover="over(event)">
           </ul>
@@ -29,7 +28,7 @@
     <div class="add-card topo cinza" onclick="adicionar(this)">  adicionar tarefa</div>
 </div>
 
-<div class="container ">    <div class="topo">fazer</div>
+<div class="container " id="container2">    <div class="topo"><button class="mudar-cor" onclick="mudarCor2(this)">r </button> fazer <input class="cor" id="cor2" type="color"> </div>
         
         <ul id="feito" ondrop="drop(event, this.id)" ondragover="over(event)">
          </ul>
@@ -37,6 +36,7 @@
         <div class="add-card topo cinza" onclick="adicionar(this)">  adicionar tarefa</div>
     </div>
 
+</div>
 </div>
 </body>
 <script src="script.js"></script>
